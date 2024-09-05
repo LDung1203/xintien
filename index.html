@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div id="content">
+                <img src="458198495_499959572752359_208841140496050301_n.jpg" alt="" id="myImage">
+                <div class="boxchoose">
+                        <h2>Trung thu là tết thiếu nhi tại sao người lớn cứ đi chơi nhiều???</h2>
+                        <h3>Bạn sẽ lì xì cho con người khốn khổ như tôi đúng không :)))</h3>
+                        <div id="listbutton">
+                                <button id="no">Éo</button>
+                                <button id="yes" style="
+                                animation: shakeBtn 0.5s infinite alternate;
+                                "><a href="QR.html" style="text-decoration: none;
+                                color: #000;">Chắc chắn là như vậy rồi</a></button>
+                                <!-- <p id="message" style="display: none;">Congratulations! You have reached the maximum size of Yes!</p> -->
+                        </div>
+                </div>
+        </div>
+        <script>
+//----------------------------------------------------------------------------------------------------------------//
+                const noButton = document.getElementById('no');
+                const yesButton = document.getElementById('yes');
+                const container = document.getElementById('listbutton');
+                const img = document.getElementById('myImage');
+                // const message = document.getElementById('message'); // Thẻ chứa đoạn text
+
+                // Biến để lưu trữ kích thước hiện tại của nút Yes
+                let currentScale = 1;
+                const maxScale = 5; // Kích thước tối đa cho nút Yes
+
+                // Hàm để di chuyển nút No đến vị trí ngẫu nhiên
+                noButton.addEventListener('mouseover', function() {
+                const containerRect = container.getBoundingClientRect();
+                const buttonRect = noButton.getBoundingClientRect();
+
+                // Tính toán vị trí ngẫu nhiên nhưng vẫn đảm bảo nút không bị trượt ra khỏi container
+                const maxLeft = containerRect.width - buttonRect.width;
+                const maxTop = containerRect.height - buttonRect.height;
+
+                const randomX = Math.random() * maxLeft;
+                const randomY = Math.random() * maxTop;
+
+                noButton.style.position = 'absolute';
+                noButton.style.left = `${randomX}px`;
+                noButton.style.top = `${randomY}px`;
+                
+                
+
+                // Tăng kích thước của nút Yes khi di chuột vào nút No
+                if (currentScale < maxScale) {
+                        currentScale += 0.5; // Tăng kích thước một lượng nhỏ
+                        yesButton.style.transform = `scale(${currentScale})`;
+                }
+                // Ẩn nút No khi kích thước của Yes đạt giá trị tối đa
+                if (currentScale >= maxScale) {
+                        noButton.style.display = 'none'; // Hoặc sử dụng visibility: 'hidden'
+                        img.src = "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.15752-9/457039833_2448752845327883_1957068904791602829_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=U30gahckG7UQ7kNvgFNN3Zy&_nc_ht=scontent.fhan20-1.fna&oh=03_Q7cD1QGhuwMeBPk1b0RNiejSKaNbjFT8pKKaTSRRWzBmWQU3KA&oe=67014DD5"; // Thay đổi URL ảnh mới
+                        img.style.width = "300px"; // Thay đổi kích thước chiều rộng
+                        img.style.height = "300px"; // Thay đổi kích thước chiều cao
+                        // message.style.display = 'block';
+                        alert('CÓ CHO NHANH KHÔNG THÌ BẢO, CẢNH CÁO MỘT LẦN THÔI');
+                }
+                });
+        </script>
+</body>
+</html>
