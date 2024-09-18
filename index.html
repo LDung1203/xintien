@@ -7,11 +7,19 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+        
 </head>
 <body>
+        <a class="codepro-trungthu-left" href="#"><img alt="Trang trí đón trung thu cho blog/website bằng hình ảnh cành hoa, mặt trăng, lồng đèn và rước đèn" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDRQDNRDJSlZRrIKuZRomBtjjivs-t1jfwB6IkfhvQKmELLo39koAHruvvI8AbA36-9RS9kfmmFhRS7fkUrw3WyDaPnOdaaQJD_2O9hha27XTfL1AXaa6eQzPwcSXGJYSDh3tjOxxqIjjg/s0/canh-hoa-long-den-trung-thu.png"/></a>
+        <a class="codepro-trungthu-right" href="#"><img alt="Trang trí đón trung thu cho blog/website bằng hình ảnh cành hoa, mặt trăng, lồng đèn và rước đèn" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiw6yXD0rFuvZkHIkxbuOnoa79ka3vPpJcf1xiyDFKBTAbhwCrGnRRZWrGIYURFqO-f5dSLLfJYTcDix5QYdk2eMXzShs4RMX4s27Maq6qnyhVE7KDl72Cs8p_tS_PxjDA-8e1QziNUBhZW/s0/mat-trang-long-den-trung-thu.png"/></a>
+        <a class="codepro-trungthu-bottom" href="#"><img alt="Trang trí đón trung thu cho blog/website bằng hình ảnh cành hoa, mặt trăng, lồng đèn và rước đèn" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEin1CJgORKie1yLvYVC3U8v7pL3Q5xMwchSkN9c0xaVLaRIFzyPzqXVM_dwFH_pAPLz_sPH7p6dUVqWKdnja7rhBQxY4r6ZaG7id6ZBf1FxmhQbSPJDo4oAPJ4F_VA0tbEvQxu93rm78FsX/s0/ruoc-den-trung-thu.png"/></a>
+        
         <div id="content">
-                <img src="458198495_499959572752359_208841140496050301_n.jpg" alt="" id="myImage">
+                <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t1.15752-9/457039833_2448752845327883_1957068904791602829_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=U30gahckG7UQ7kNvgFNN3Zy&_nc_ht=scontent.fhan20-1.fna&oh=03_Q7cD1QGhuwMeBPk1b0RNiejSKaNbjFT8pKKaTSRRWzBmWQU3KA&oe=67014DD5" alt="" id="myImage">
                 <div class="boxchoose">
                         <h2>Trung thu là tết thiếu nhi tại sao người lớn cứ đi chơi nhiều???</h2>
                         <h3>Bạn sẽ lì xì cho con người khốn khổ như tôi đúng không :)))</h3>
@@ -20,11 +28,18 @@
                                 <button id="yes" style="
                                 animation: shakeBtn 0.5s infinite alternate;
                                 "><a href="QR.html" style="text-decoration: none;
-                                color: #000;">Chắc chắn là như vậy rồi</a></button>
+                                color: antiquewhite;">Chắc chắn là như vậy rồi</a></button>
                                 <!-- <p id="message" style="display: none;">Congratulations! You have reached the maximum size of Yes!</p> -->
                         </div>
                 </div>
         </div>
+        <div class='contentz'>
+                <canvas class='star'></canvas>
+        </div>
+        <link href="https://cdn.leanhduc.pro.vn/utilities/multi-color-star-effects/style.css" rel="stylesheet"/>
+        <script src="https://cdn.leanhduc.pro.vn/jquery/3.6.0.min.js"></script>
+        <script src="https://cdn.leanhduc.pro.vn/utilities/multi-color-star-effects/main.js"></script>
+          
         <script>
 //----------------------------------------------------------------------------------------------------------------//
                 const noButton = document.getElementById('no');
@@ -38,7 +53,7 @@
                 const maxScale = 5; // Kích thước tối đa cho nút Yes
 
                 // Hàm để di chuyển nút No đến vị trí ngẫu nhiên
-                noButton.addEventListener('mouseover', function() {
+                noButton.addEventListener('click', function() {
                 const containerRect = container.getBoundingClientRect();
                 const buttonRect = noButton.getBoundingClientRect();
 
@@ -63,9 +78,6 @@
                 // Ẩn nút No khi kích thước của Yes đạt giá trị tối đa
                 if (currentScale >= maxScale) {
                         noButton.style.display = 'none'; // Hoặc sử dụng visibility: 'hidden'
-                        img.src = "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.15752-9/457039833_2448752845327883_1957068904791602829_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=U30gahckG7UQ7kNvgFNN3Zy&_nc_ht=scontent.fhan20-1.fna&oh=03_Q7cD1QGhuwMeBPk1b0RNiejSKaNbjFT8pKKaTSRRWzBmWQU3KA&oe=67014DD5"; // Thay đổi URL ảnh mới
-                        img.style.width = "300px"; // Thay đổi kích thước chiều rộng
-                        img.style.height = "300px"; // Thay đổi kích thước chiều cao
                         // message.style.display = 'block';
                         alert('CÓ CHO NHANH KHÔNG THÌ BẢO, CẢNH CÁO MỘT LẦN THÔI');
                 }
